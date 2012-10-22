@@ -1,5 +1,9 @@
 # The JBoss BPEL Tools project
 
+## Summary
+
+JBoss BPEL Tools are extensions to Eclipse BPEL project.
+
 ## Install
 
 _JBoss BPEL Tools_ is part of [JBoss Tools](http://jboss.org/tools) from
