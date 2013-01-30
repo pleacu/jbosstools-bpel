@@ -1,37 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
 	<description>To install these features, point Eclipse at this site.</description>
-	<!-- JBoss Tools bpel Nightly Build Update Site -->
-	<category-def label="JBoss Tools bpel Nightly Build Update Site" name="JBoss Tools bpel Nightly Build Update Site">
-		<description>JBoss Tools bpel Nightly Build Update Site: contains all features in this build.</description>
+	<!-- JBoss BPEL Nightly Site -->
+	<category-def label="JBoss BPEL Nightly Site" name="JBoss BPEL Nightly Site">
+		<description>JBoss BPEL Nightly Site: contains all features in this build.</description>
 	</category-def>
-	<feature url="features/org.jboss.tools.bpel.feature_0.0.0.jar" id="org.jboss.tools.bpel.feature" version="0.0.0">
-		<category name="JBoss Tools bpel Nightly Build Update Site"/>
-	</feature>
-	<feature url="features/org.jboss.tools.bpel.feature.source_0.0.0.jar" id="org.jboss.tools.bpel.feature.source" version="0.0.0">
-		<category name="JBoss Tools bpel Nightly Build Update Site"/>
-	</feature>
-	<feature url="features/org.eclipse.bpel.feature_0.0.0.jar" id="org.eclipse.bpel.feature" version="0.0.0">
-		<category name="JBoss Tools bpel Nightly Build Update Site"/>
-	</feature>
-	<feature url="features/org.eclipse.bpel.common.feature_0.0.0.jar" id="org.eclipse.bpel.common.feature" version="0.0.0">
-		<category name="JBoss Tools bpel Nightly Build Update Site"/>
-	</feature>
 
-	<feature url="features/org.eclipse.bpel.apache.ode.runtime.feature_0.0.0.jar" id="org.eclipse.bpel.apache.ode.runtime.feature" version="0.0.0">
-		<category name="JBoss Tools bpel Nightly Build Update Site"/>
-	</feature>
+	<!-- eclipse.org features -->
+	<feature url="features/org.eclipse.bpel.feature_0.0.0.jar" id="org.eclipse.bpel.feature" version="0.0.0"> <category name="JBoss BPEL Nightly Site"/> </feature>
+	<feature url="features/org.eclipse.bpel.common.feature_0.0.0.jar" id="org.eclipse.bpel.common.feature" version="0.0.0"> <category name="JBoss BPEL Nightly Site"/> </feature>
+	<feature url="features/org.eclipse.bpel.apache.ode.runtime.feature_0.0.0.jar" id="org.eclipse.bpel.apache.ode.runtime.feature" version="0.0.0"> <category name="JBoss BPEL Nightly Site"/> </feature>
+
+	<!-- jboss.org features -->
+	<feature url="features/org.jboss.tools.bpel.feature_0.0.0.jar" id="org.jboss.tools.bpel.feature" version="0.0.0"> <category name="JBoss BPEL Nightly Site"/> </feature>
+	<feature url="features/org.jboss.tools.bpel.feature.source_0.0.0.jar" id="org.jboss.tools.bpel.feature.source" version="0.0.0"> <category name="JBoss BPEL Nightly Site"/> </feature>
 	<!-- TODO: COMING SOON - see JBDS-1810 
-	<feature url="features/org.jboss.tools.bpel.runtime.feature_0.0.0.jar" id="org.jboss.tools.bpel.runtime.feature" version="0.0.0">
-		<category name="JBoss Tools bpel Nightly Build Update Site"/>
-	</feature>
+	<feature url="features/org.jboss.tools.bpel.runtime.feature_0.0.0.jar" id="org.jboss.tools.bpel.runtime.feature" version="0.0.0"> <category name="JBoss BPEL Nightly Site"/> </feature>
 	-->
 
-	<feature url="features/org.jboss.tools.bpel.test.feature_0.0.0.jar" id="org.jboss.tools.bpel.test.feature" version="0.0.0">
-		<category name="JBoss Tools bpel Nightly Build Update Site"/>
-	</feature>
-	<feature url="features/org.jboss.tools.bpel.test.feature.source_0.0.0.jar" id="org.jboss.tools.bpel.test.feature.source" version="0.0.0">
-		<category name="JBoss Tools bpel Nightly Build Update Site"/>
-	</feature>
+	<!-- test features -->
+	<feature url="features/org.jboss.tools.bpel.test.feature_0.0.0.jar" id="org.jboss.tools.bpel.test.feature" version="0.0.0"> <category name="JBoss BPEL Nightly Site"/> </feature>
+	<feature url="features/org.jboss.tools.bpel.test.feature.source_0.0.0.jar" id="org.jboss.tools.bpel.test.feature.source" version="0.0.0"> <category name="JBoss BPEL Nightly Site"/> </feature>
 
 </site>
