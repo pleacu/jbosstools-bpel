@@ -1,5 +1,11 @@
 package org.jboss.tools.bpel.runtimes.ui.view.server;
 
+import org.eclipse.core.resources.IProject;
+import org.eclipse.core.runtime.CoreException;
+import org.eclipse.core.runtime.IStatus;
+import org.eclipse.core.runtime.NullProgressMonitor;
+import org.eclipse.core.runtime.Path;
+import org.eclipse.core.runtime.Status;
 import org.eclipse.jface.action.Action;
 import org.eclipse.jface.action.IMenuManager;
 import org.eclipse.jface.viewers.IStructuredSelection;
@@ -12,7 +18,11 @@ import org.eclipse.ui.navigator.ICommonViewerSite;
 import org.eclipse.ui.navigator.ICommonViewerWorkbenchSite;
 import org.eclipse.wst.server.core.IServer;
 import org.eclipse.wst.server.ui.internal.view.servers.ModuleServer;
-import org.jboss.tools.bpel.runtimes.module.JBTBPELPublisher;
+import org.jboss.ide.eclipse.as.core.util.JBossServerBehaviorUtils;
+import org.jboss.ide.eclipse.as.wtp.core.server.behavior.IControllableServerBehavior;
+import org.jboss.ide.eclipse.as.wtp.core.server.behavior.IFilesystemController;
+import org.jboss.tools.bpel.runtimes.RuntimesPlugin;
+import org.jboss.tools.bpel.runtimes.module.BPELPublishDescriptor;
 import org.jboss.tools.bpel.runtimes.ui.view.server.BPELModuleContentProvider.BPELVersionDeployment;
 
 public class BPELModuleActionProvider extends CommonActionProvider {
@@ -58,9 +68,30 @@ public class BPELModuleActionProvider extends CommonActionProvider {
 		Object firstSel = lastSelection.getFirstElement();
 		if( firstSel instanceof BPELVersionDeployment ) {
 			BPELVersionDeployment deployment = (BPELVersionDeployment)firstSel;
-			JBTBPELPublisher.removeVersion(deployment.getModuleServer().server, 
+			removeVersion(deployment.getModuleServer().server, 
 					deployment.getProject(), deployment.getPath());
 		}
+	}
+	
+
+	public static void removeVersion(IServer server, IProject project, String path) {
+		// delete file
+		IControllableServerBehavior beh = JBossServerBehaviorUtils.getControllableBehavior(server);
+		CoreException ce = null;
+		try {
+			if( beh != null ) { 
+				IFilesystemController filesystemController = (IFilesystemController)beh.getController(IFilesystemController.SYSTEM_ID);
+				if( filesystemController != null ) {
+					filesystemController.deleteResource(new Path(path), new NullProgressMonitor());
+				}
+				BPELPublishDescriptor.removeVersionFromDescriptor(server, project, path);
+				return;
+			}
+		} catch(CoreException ce2) {
+			ce = ce2;
+		}
+		IStatus s = new Status(IStatus.ERROR, RuntimesPlugin.PLUGIN_ID, "Unable to remove bpel module version", ce);
+		RuntimesPlugin.log(new CoreException(s), IStatus.ERROR);
 	}
 	
 	protected IServer getLastServer() {
