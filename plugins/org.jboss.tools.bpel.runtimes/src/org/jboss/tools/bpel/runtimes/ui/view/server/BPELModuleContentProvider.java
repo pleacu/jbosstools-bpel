@@ -7,7 +7,8 @@ import org.eclipse.wst.server.core.IModule;
 import org.eclipse.wst.server.core.IServer;
 import org.eclipse.wst.server.ui.internal.view.servers.ModuleServer;
 import org.jboss.tools.bpel.runtimes.IBPELModuleFacetConstants;
-import org.jboss.tools.bpel.runtimes.module.JBTBPELPublisher;
+import org.jboss.tools.bpel.runtimes.module.BPELPublishController;
+import org.jboss.tools.bpel.runtimes.module.BPELPublishDescriptor;
 
 public class BPELModuleContentProvider implements ITreeContentProvider {
 	public BPELModuleContentProvider() {
@@ -27,7 +28,7 @@ public class BPELModuleContentProvider implements ITreeContentProvider {
 				)
 			) {
 				// we have a bpel module deployed to a server. List the children
-				String[] versions = JBTBPELPublisher.getDeployedPathsFromDescriptor(s, mod.getProject());
+				String[] versions = BPELPublishDescriptor.getDeployedPathsFromDescriptor(s, mod.getProject());
 				return wrap((ModuleServer)parentElement, versions);
 			}
 		}

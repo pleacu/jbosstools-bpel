@@ -234,19 +234,6 @@
        </factory>
    </extension>
    
-	<!--
-	The priority needs to be above that of JBoss7JSTPublisher publisher, which currently is 15.
-	Note that the JBoss 7 publisher does not actually accept a bpel.module - its accept method
-	defaults to AbstractServerToolsPublisher.accept() which (in this case) always returns true
-	-->
-	<extension
-		point="org.jboss.ide.eclipse.as.core.publishers">
-		<publisher
-			class="org.jboss.tools.bpel.runtimes.module.JBTBPELPublisher"
-			priority="100"
-			zipDelegate="true">
-		</publisher>
-	</extension> 
 
 <!--=========================================================================-->
 <!-- TO MAKE PROCESSES ACTUALLY LAUNCHABLE VIA RUN ON SERVER				 -->
@@ -392,9 +379,30 @@
          	id="org.jboss.ide.eclipse.as.runtime.component"/>
         <facet id="bpel.facet.core" version="1.2,2.0"/>
      </supported>
-
    </extension>
  
- 
+    <extension
+         point="org.jboss.ide.eclipse.as.wtp.core.serverSubsystem">
+      <subsystem
+            system="publishDelegate"
+            id="publishDelegate.bpel.default"
+            name="BPEL Module Publish Controller"
+            class="org.jboss.tools.bpel.runtimes.module.BPELPublishController">
+            <properties>
+               <property key="moduleType:jbt.bpel.module" value="true"/>
+               <property key="moduleType:bpel.module" value="true"/>
+            </properties>
+            <dependencies>
+               <requires
+                     system="filesystem">
+               </requires>
+            </dependencies>
+      </subsystem>
+      <subsystemMapping
+            id="publishDelegate.bpel.default"
+            mappedId="publishDelegate.bpel.default"
+            serverTypes="%AllJBTServerTypes">
+      </subsystemMapping>
+   </extension> 
  
 </plugin>
