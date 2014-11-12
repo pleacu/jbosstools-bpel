@@ -27,6 +27,7 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.ui.navigator,
  javax.wsdl,
  org.jboss.tools.foundation.core,
+ org.jboss.tools.usage;resolution:=optional;x-installation:=greedy,
  org.jboss.ide.eclipse.as.wtp.core;bundle-version="3.0.0",
  org.jboss.ide.eclipse.as.core;bundle-version="3.0.0"
 Eclipse-LazyStart: true
