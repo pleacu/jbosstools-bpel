@@ -10,9 +10,19 @@
 	<groupId>org.jboss.tools.bpel</groupId>
 	<artifactId>bpel.site</artifactId>
 	<packaging>eclipse-repository</packaging>
-	<!--
 	<repositories>
-	-->
+		<!-- To resolve parent artifact -->
+		<repository>
+			<id>jboss-public-repository-group</id>
+			<name>JBoss Public Repository Group</name>
+			<url>http://repository.jboss.org/nexus/content/groups/public/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
 		<!-- since BPEL is on the TP, don't need to get it from ${jboss-requirements-composite-mirror} 
 		<repository>
 			<id>jboss-requirements-composite-mirror</id>
@@ -52,9 +62,7 @@
 			</releases>
 		</repository>
 		-->
-	<!--
 	</repositories>
-	-->
 </project>
 
 
