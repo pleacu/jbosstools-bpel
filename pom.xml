@@ -28,11 +28,14 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
         <version>${tychoVersion}</version>
         <configuration>
           <environments>
+          <!-- temporarily removed because of problems with mac OSX build error:
+            Could not determine SWT implementation fragment bundle for environment
             <environment>
               <os>macosx</os>
               <ws>cocoa</ws>
               <arch>x86</arch>
             </environment>
+            -->
             <environment>
               <os>macosx</os>
               <ws>cocoa</ws>
