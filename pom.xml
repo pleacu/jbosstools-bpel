@@ -30,10 +30,10 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
     <jboss-tycho-version>0.26.0</jboss-tycho-version>
     <tychoVersion>0.26.0</tychoVersion>
     <tychoExtrasVersion>${tychoVersion}</tychoExtrasVersion>
-    
-     <tycho.scmUrl>scm:git:https://github.com/jbosstools/jbosstools-bpel.git</tycho.scmUrl>
-     <BUILD_ALIAS>SNAPSHOT</BUILD_ALIAS>
-     <BUILD_NUMBER>99</BUILD_NUMBER>
+    <jbossTychoPluginsVersion>${tychoVersion}</jbossTychoPluginsVersion>
+    <tycho.scmUrl>scm:git:https://github.com/jbosstools/jbosstools-bpel.git</tycho.scmUrl>
+    <BUILD_ALIAS>SNAPSHOT</BUILD_ALIAS>
+    <BUILD_NUMBER>99</BUILD_NUMBER>
   </properties>
 
   <modules>
