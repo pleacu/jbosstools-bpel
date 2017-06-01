@@ -4,12 +4,12 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
   <parent>
     <groupId>org.jboss.tools</groupId>
     <artifactId>parent</artifactId>
-    <version>4.4.2.Final-SNAPSHOT</version>
+    <version>4.5.0.AM1-SNAPSHOT</version>
   </parent>
   <groupId>org.jboss.tools</groupId>
   <artifactId>bpel</artifactId>
   <name>JBoss Tools BPEL</name>
-  <version>1.3.300-SNAPSHOT</version>
+  <version>1.4.0-SNAPSHOT</version>
   <packaging>pom</packaging>
   
   <prerequisites>
@@ -23,7 +23,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
     <maven.compiler.target>1.8</maven.compiler.target>
 
     <!-- JBoss Tools Integration Stack version -->
-    <jbtis.version>4.4.3.Final</jbtis.version>
+    <jbtis.version>4.5.0.AM1-SNAPSHOT</jbtis.version>
     <jbtis.classifier>base</jbtis.classifier> <!-- base-ea -->
     
     <!-- Tycho versions -->

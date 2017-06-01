@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature id="org.jboss.tools.bpel.feature"
 	label="%featureName"
-	version="1.3.300.qualifier"
+	version="1.4.0.qualifier"
 	provider-name="%providerName"
 	plugin="org.eclipse.bpel.ui"
       license-feature="org.jboss.tools.foundation.license.feature"
@@ -65,9 +65,9 @@
 		<import plugin="org.eclipse.ui" version="3.4.0" match="compatible" />
 		<import plugin="org.eclipse.gef" version="3.4.0" match="compatible" />
 		<!-- require o.e.bpel [1.1.0,2.0) -->
-		<import feature="org.eclipse.bpel.feature" version="1.1.0" match="compatible" />
-		<import feature="org.eclipse.bpel.common.feature" version="1.1.0" match="compatible" />
-		<import feature="org.eclipse.bpel.apache.ode.runtime.feature" version="1.1.0" match="compatible" />
+		<import feature="org.eclipse.bpel.feature" version="1.1.1" match="compatible" />
+		<import feature="org.eclipse.bpel.common.feature" version="1.1.1" match="compatible" />
+		<import feature="org.eclipse.bpel.apache.ode.runtime.feature" version="1.1.1" match="compatible" />
 	</requires>
 	
 	<plugin id="org.jboss.tools.bpel.runtimes" download-size="0" install-size="0" version="0.0.0" unpack="false" />
