@@ -4,7 +4,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
   <parent>
     <groupId>org.jboss.tools</groupId>
     <artifactId>parent</artifactId>
-    <version>4.5.0.AM1-SNAPSHOT</version>
+    <version>4.5.0.AM2-SNAPSHOT</version>
   </parent>
   <groupId>org.jboss.tools</groupId>
   <artifactId>bpel</artifactId>
@@ -23,8 +23,8 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
     <maven.compiler.target>1.8</maven.compiler.target>
 
     <!-- JBoss Tools Integration Stack version -->
-    <jbtis.version>4.5.0.AM1-SNAPSHOT</jbtis.version>
-    <jbtis.classifier>base</jbtis.classifier> <!-- base-ea -->
+    <jbtis.version>4.5.0.CR1</jbtis.version>
+    <jbtis.classifier>base</jbtis.classifier> <!-- base -->
     
     <!-- Tycho versions -->
     <jboss-tycho-version>0.26.0</jboss-tycho-version>
@@ -32,7 +32,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
     <tychoExtrasVersion>${tychoVersion}</tychoExtrasVersion>
     <jbossTychoPluginsVersion>${tychoVersion}</jbossTychoPluginsVersion>
     <tycho.scmUrl>scm:git:https://github.com/jbosstools/jbosstools-bpel.git</tycho.scmUrl>
-    <BUILD_ALIAS>SNAPSHOT</BUILD_ALIAS>
+    <BUILD_ALIAS>CR1</BUILD_ALIAS>
     <BUILD_NUMBER>99</BUILD_NUMBER>
   </properties>
 
