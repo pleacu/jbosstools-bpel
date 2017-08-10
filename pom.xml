@@ -4,7 +4,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
   <parent>
     <groupId>org.jboss.tools</groupId>
     <artifactId>parent</artifactId>
-    <version>4.5.0.AM2-SNAPSHOT</version>
+    <version>4.5.0.Final-SNAPSHOT</version>
   </parent>
   <groupId>org.jboss.tools</groupId>
   <artifactId>bpel</artifactId>
@@ -23,7 +23,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
     <maven.compiler.target>1.8</maven.compiler.target>
 
     <!-- JBoss Tools Integration Stack version -->
-    <jbtis.version>4.5.0.CR1</jbtis.version>
+    <jbtis.version>4.5.0.Final</jbtis.version>
     <jbtis.classifier>base</jbtis.classifier> <!-- base -->
     
     <!-- Tycho versions -->
