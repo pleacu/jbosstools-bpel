@@ -4,7 +4,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
   <parent>
     <groupId>org.jboss.tools</groupId>
     <artifactId>parent</artifactId>
-    <version>4.6.0.AM1-SNAPSHOT</version>
+    <version>4.6.0.Final-SNAPSHOT</version>
   </parent>
   <groupId>org.jboss.tools</groupId>
   <artifactId>bpel</artifactId>
@@ -22,7 +22,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
 
-    <!-- JBoss Tools Integration Stack version -->
+    <!-- JBoss Tools Integration Stack TP version -->
     <jbtis.version>4.6.0.AM1-SNAPSHOT</jbtis.version>
     <jbtis.classifier>base</jbtis.classifier> <!-- base -->
     
