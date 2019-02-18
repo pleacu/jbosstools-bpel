@@ -23,7 +23,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
     <maven.compiler.target>1.8</maven.compiler.target>
 
     <!-- JBoss Tools Integration Stack TP version -->
-    <jbtis.version>4.9.0.Final</jbtis.version>
+    <jbtis.version>4.6.1.Final</jbtis.version>
     <jbtis.classifier>base</jbtis.classifier> <!-- base -->
     
     <!-- Tycho versions -->
